@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media Host Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body{
+      background: black;
+      overflow-x: hidden;
+    }
+
+    .glow1{
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: #d946ef;
+      filter: blur(150px);
+      opacity: 0.25;
+      border-radius: 50%;
+      top: -100px;
+      left: -100px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .glow2{
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: #7c3aed;
+      filter: blur(150px);
+      opacity: 0.2;
+      border-radius: 50%;
+      bottom: -100px;
+      right: -100px;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%{transform: translateY(0px);}
+      50%{transform: translateY(20px);}
+      100%{transform: translateY(0px);}
+    }
+
+    .glass{
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .gallery img{
+      transition: 0.6s;
+    }
+
+    .gallery img:hover{
+      transform: scale(1.08);
+    }
+
+    .hover-up{
+      transition: 0.4s;
+    }
+
+    .hover-up:hover{
+      transform: translateY(-10px);
+    }
+
+    .gradient-text{
+      background: linear-gradient(to right,#e879f9,#8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="text-white">
+
+  <!-- Background Glow -->
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Hritika Dam</h1>
+
+      <div class="hidden md:flex gap-8 text-sm text-white/80">
+        <a href="#about" class="hover:text-pink-400">About</a>
+        <a href="#experience" class="hover:text-pink-400">Experience</a>
+        <a href="#gallery" class="hover:text-pink-400">Gallery</a>
+        <a href="#promotions" class="hover:text-pink-400">Promotions</a>
+        <a href="#contact" class="hover:text-pink-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 gap-16 pt-32">
+
+    <div class="flex-1 space-y-8">
+
+      <div class="inline-block px-4 py-2 rounded-full glass text-pink-300 text-sm">
+        ✨ Media Personality Portfolio
+      </div>
+
+      <div>
+        <h1 class="text-5xl md:text-7xl font-black leading-tight">
+          Event Host <br>
+          <span class="gradient-text">& Anchor</span>
+        </h1>
+
+        <p class="text-xl text-white/70 mt-6 max-w-xl">
+          Bringing confidence, energy, and audience engagement to every stage and screen.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+  <button class="px-8 py-4 rounded-2xl bg-gradient-to-r from-pink-600 to-violet-600 font-semibold hover:scale-105 transition">
+    View Portfolio
+  </button>
+
+  <a
+    href="#contact"
+    class="px-8 py-4 rounded-2xl glass hover:bg-white/10 transition inline-block"
+  >
+    Contact Me
+  </a>
+</div>
+
+    </div>
+
+    <div class="flex-1 relative">
+      <div class="glass p-4 rounded-[2rem] hover:scale-[1.02] transition duration-500">
+        <img
+          src="hero.jpeg"
+          class="rounded-[1.5rem] w-full h-[600px] object-cover"
+        />
+      </div>
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-2 gap-16 items-center">
+
+    <div class="space-y-8">
+
+      <div class="inline-block px-4 py-2 rounded-full glass text-pink-300 text-sm">
+        About Me
+      </div>
+
+      <h2 class="text-5xl font-bold leading-tight">
+        Building memorable experiences through communication & stage presence.
+      </h2>
+
+      <p class="text-white/70 text-lg leading-relaxed">
+        Passionate communicator experienced in stage hosting, anchoring, digital promotions, and UGC content creation. Skilled at engaging audiences both offline and online through confident public speaking and creative brand communication.
+      </p>
+
+      <div class="grid grid-cols-2 gap-4">
+
+        <div class="glass p-6 rounded-3xl">
+          <h3 class="text-3xl font-bold text-pink-400">10+</h3>
+          <p class="text-white/60 mt-2">Events Hosted</p>
+        </div>
+
+        <div class="glass p-6 rounded-3xl">
+          <h3 class="text-3xl font-bold text-pink-400">5+</h3>
+          <p class="text-white/60 mt-2">Brand Campaigns</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="glass p-4 rounded-[2rem]">
+      <img
+        src="about.jpeg"
+        class="rounded-[1.5rem] h-[550px] w-full object-cover"
+      />
+    </div>
+
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-32">
+
+    <div class="text-center mb-20">
+      <div class="inline-block px-4 py-2 rounded-full glass text-pink-300 text-sm mb-6">
+        Experience Timeline
+      </div>
+
+      <h2 class="text-5xl font-bold">My Journey</h2>
+    </div>
+
+    <div class="border-l border-pink-500/30 ml-6 space-y-16">
+
+      <!-- Anchoring -->
+      <div class="relative pl-12">
+        <div class="absolute -left-3 top-2 w-6 h-6 rounded-full bg-pink-500"></div>
+
+        <div class="glass p-8 rounded-3xl hover-up">
+          <h3 class="text-2xl font-bold mb-4">
+            Event Anchor & Host
+          </h3>
+
+          <p class="text-white/70 leading-relaxed">
+            Anchored college fests, cultural programs, and vibrant sangeet events with confident stage presence, audience interaction, and energetic live engagement.
+          </p>
+        </div>
+      </div>
+
+      <!-- Evo Connect -->
+      <div class="relative pl-12">
+        <div class="absolute -left-3 top-2 w-6 h-6 rounded-full bg-violet-500"></div>
+
+        <div class="glass p-8 rounded-3xl hover-up">
+          <h3 class="text-2xl font-bold mb-4">
+            Executive Intern — Evo Connect
+          </h3>
+
+          <p class="text-white/70 leading-relaxed">
+            Worked as an Executive Intern at Evo Connect, contributing to brand communication, audience engagement, and digital outreach initiatives through creative media interaction.
+          </p>
+        </div>
+      </div>
+
+      <!-- UGC Creator -->
+      <div class="relative pl-12">
+        <div class="absolute -left-3 top-2 w-6 h-6 rounded-full bg-pink-500"></div>
+
+        <div class="glass p-8 rounded-3xl hover-up">
+          <h3 class="text-2xl font-bold mb-4">
+            UGC Creator & Face Video Content
+          </h3>
+
+          <p class="text-white/70 leading-relaxed">
+            Created face-video based UGC content focused on storytelling, audience connection, and promotional engagement for social media campaigns and digital visibility.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="max-w-7xl mx-auto px-6 py-32">
+
+    <div class="text-center mb-20">
+      <div class="inline-block px-4 py-2 rounded-full glass text-pink-300 text-sm mb-6">
+        Gallery
+      </div>
+
+      <h2 class="text-5xl font-bold">Stage Moments</h2>
+    </div>
+
+    <div class="gallery columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+
+      <img class="rounded-[2rem]" src="gallery1 (1).jpeg">
+
+      <img class="rounded-[2rem]" src="gallery1 (2).jpeg">
+
+      <img class="rounded-[2rem]" src="gallery2.jpeg">
+
+      <img class="rounded-[2rem]" src="gallery3.jpeg">
+
+      <img class="rounded-[2rem]" src="gallery4.jpeg">
+
+      <img class="rounded-[2rem]" src="gallery5.jpeg">
+
+    </div>
+
+  </section>
+
+  <!-- Promotion Posts -->
+<section id="promotions" class="max-w-7xl mx-auto px-6 py-32">
+
+  <div class="text-center mb-20">
+    <div class="inline-block px-4 py-2 rounded-full glass text-pink-300 text-sm mb-6">
+      Brand Collaborations
+    </div>
+
+    <h2 class="text-5xl font-bold">
+      Featured Promotion Campaigns
+    </h2>
+
+    <p class="text-white/60 mt-6 max-w-2xl mx-auto">
+      Social media promotions and collaboration campaigns created for audience engagement and digital brand visibility.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Card 1 -->
+    <div class="glass rounded-[2rem] overflow-hidden hover-up">
+
+      <video
+        class="w-full h-[300px] object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="video1.mp4" type="video/mp4">
+      </video>
+
+      <div class="p-6">
+
+        <h3 class="text-2xl font-bold mb-3">
+          Evo Connect Campaign
+        </h3>
+
+        <p class="text-white/60 mb-6">
+          At Evo Connect, it’s not just about connections — it’s about creating opportunities that move businesses forward through meaningful collaborations and powerful conversations.
+        </p>
+
+        <a
+          href="https://www.instagram.com/reel/DX2iKhKz80_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          class="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-violet-600 hover:scale-105 transition"
+        >
+          View Post
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- Card 2 -->
+    <div class="glass rounded-[2rem] overflow-hidden hover-up">
+
+      <video
+        class="w-full h-[300px] object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="video2.mp4" type="video/mp4">
+      </video>
+
+      <div class="p-6">
+
+        <h3 class="text-2xl font-bold mb-3">
+          Networking & Growth
+        </h3>
+
+        <p class="text-white/60 mb-6">
+          One strong relationship can transform business growth. Building trust, showing up consistently, and creating value are the real foundations of long-term success..
+        </p>
+
+        <a
+          href="https://www.instagram.com/reel/DXB_UfDk4nU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          class="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-violet-600 hover:scale-105 transition"
+        >
+          View Post
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- Card 3 -->
+    <div class="glass rounded-[2rem] overflow-hidden hover-up">
+
+      <video
+        class="w-full h-[300px] object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="video3.mp4" type="video/mp4">
+      </video>
+
+      <div class="p-6">
+
+        <h3 class="text-2xl font-bold mb-3">
+          Ecommerce Networking Platform
+        </h3>
+
+        <p class="text-white/60 mb-6">
+          Evo Connect is India’s first ecommerce-enabled networking platform where meaningful connections convert into real business opportunities and collaborations.
+        </p>
+
+        <a
+          href="https://www.instagram.com/reel/DWm1wEqE6Xu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          class="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-violet-600 hover:scale-105 transition"
+        >
+          View Post
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Anchoring Videos -->
+<section id="anchoring-videos" class="max-w-7xl mx-auto px-6 py-32">
+
+  <div class="text-center mb-20">
+    <div class="inline-block px-4 py-2 rounded-full glass text-pink-300 text-sm mb-6">
+      Live Anchoring
+    </div>
+
+    <h2 class="text-5xl font-bold">
+      Hosting & Event Highlights
+    </h2>
+
+    <p class="text-white/60 mt-6 max-w-2xl mx-auto">
+      A glimpse into live stage hosting, marriage anchoring, audience interaction, and event presentation moments.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Marriage Anchoring Video 1 -->
+    <div class="glass rounded-[2rem] overflow-hidden hover-up">
+
+      <div class="h-[300px] flex items-center justify-center bg-black/40">
+        <div class="text-center px-6">
+
+          <h3 class="text-2xl font-bold mb-4">
+            Marriage Anchoring — Part 1
+          </h3>
+
+          <p class="text-white/60 mb-6">
+            Watch live wedding hosting and audience engagement moments.
+          </p>
+
+          <a
+            href="https://drive.google.com/file/d/1a4GQ_QatBrZRIG3rr5reutOWZ9Nt4sk9/view?usp=drivesdk"
+            target="_blank"
+            class="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-violet-600 hover:scale-105 transition"
+          >
+            Watch Video
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Marriage Anchoring Video 2 -->
+    <div class="glass rounded-[2rem] overflow-hidden hover-up">
+
+      <div class="h-[300px] flex items-center justify-center bg-black/40">
+        <div class="text-center px-6">
+
+          <h3 class="text-2xl font-bold mb-4">
+            Marriage Anchoring — Part 2
+          </h3>
+
+          <p class="text-white/60 mb-6">
+            Energetic stage presence, crowd interaction, and hosting highlights.
+          </p>
+
+          <a
+            href="https://drive.google.com/file/d/1B3wILFkhvs2Da_wuVjjiaT9X7E4XAM8d/view?usp=drivesdk"
+            target="_blank"
+            class="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-violet-600 hover:scale-105 transition"
+          >
+            Watch Video
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Event Anchoring Video -->
+    <div class="glass rounded-[2rem] overflow-hidden hover-up">
+
+      <video
+        class="w-full h-[300px] object-cover"
+        controls
+        playsinline
+      >
+        <source src="video4.mp4" type="video/mp4">
+      </video>
+
+      <div class="p-6">
+
+        <h3 class="text-2xl font-bold mb-3">
+          Event Anchoring
+        </h3>
+
+        <p class="text-white/60 mb-6">
+          Live event hosting showcasing confidence, communication, and audience engagement.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- Skills -->
+  <section class="max-w-6xl mx-auto px-6 py-32">
+
+    <div class="text-center mb-20">
+      <div class="inline-block px-4 py-2 rounded-full glass text-pink-300 text-sm mb-6">
+        Skills
+      </div>
+
+      <h2 class="text-5xl font-bold">What I Bring</h2>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6">
+
+      <div class="glass px-8 py-5 rounded-2xl hover-up">Public Speaking</div>
+      <div class="glass px-8 py-5 rounded-2xl hover-up">Anchoring</div>
+      <div class="glass px-8 py-5 rounded-2xl hover-up">Event Hosting</div>
+      <div class="glass px-8 py-5 rounded-2xl hover-up">Audience Engagement</div>
+      <div class="glass px-8 py-5 rounded-2xl hover-up">Communication</div>
+      <div class="glass px-8 py-5 rounded-2xl hover-up">Brand Promotion</div>
+      <div class="glass px-8 py-5 rounded-2xl hover-up">UGC Content Creation</div>
+      <div class="glass px-8 py-5 rounded-2xl hover-up">Face Video Content</div>
+      <div class="glass px-8 py-5 rounded-2xl hover-up">Stage Management</div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-5xl mx-auto px-6 py-32 text-center">
+
+    <div class="inline-block px-4 py-2 rounded-full glass text-pink-300 text-sm mb-6">
+      Contact
+    </div>
+
+    <h2 class="text-5xl md:text-6xl font-black leading-tight mb-8">
+      Let’s collaborate for events, promotions, and media engagements.
+    </h2>
+
+    <p class="text-white/70 text-lg max-w-2xl mx-auto mb-12">
+      Open to hosting opportunities, collaborations, digital campaigns, and event engagements.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-6 mb-12">
+
+  <!-- Instagram -->
+  <a
+    href="https://www.instagram.com/your_wordbank/"
+    target="_blank"
+    class="glass px-8 py-4 rounded-2xl hover:bg-pink-500/20 transition hover:scale-105"
+  >
+    Instagram
+  </a>
+
+  <!-- Email -->
+  <a
+    href="mailto:hritikauniverse@gmail.com"
+    class="glass px-8 py-4 rounded-2xl hover:bg-pink-500/20 transition hover:scale-105"
+  >
+    Email
+  </a>
+
+  <!-- WhatsApp -->
+  <a
+    href="https://wa.me/qr/EEHVL4BQ7LMPD1"
+    target="_blank"
+    class="glass px-8 py-4 rounded-2xl hover:bg-pink-500/20 transition hover:scale-105"
+  >
+    WhatsApp
+  </a>
+
+</div>
+
+    <div class="glass p-10 rounded-[2rem]">
+
+      <form class="space-y-6">
+
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/10 focus:outline-none"
+        >
+
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/10 focus:outline-none"
+        >
+
+        <textarea
+          rows="5"
+          placeholder="Your Message"
+          class="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/10 focus:outline-none"
+        ></textarea>
+
+        <button class="w-full py-4 rounded-2xl bg-gradient-to-r from-pink-600 to-violet-600 font-semibold hover:scale-[1.02] transition">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-10 text-center text-white/50 text-sm">
+    Crafted with cinematic aesthetics & modern UI experiences.
+  </footer>
+
+</body>
+</html>
